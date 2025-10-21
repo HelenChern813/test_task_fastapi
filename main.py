@@ -28,7 +28,7 @@ def list_products(
     limit: int = Query(10, description="Максимальное число товаров для выдачи"),
 ):
     # Возвращаем срез списка
-    return products[skip : skip + limit]
+    return products[skip: skip + limit]
 
 
 @app.get("/products/{product_id}", response_model=Product, tags=["Products"])
